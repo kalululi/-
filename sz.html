@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var sz1=["Banana","Orange","Apple","Mange"]
+        sz1[0]="Apple"
+        sz1[4]="Pinapple"
+        document.write(sz1.reverse()+"<br/>")
+        
+        var sz2=[40,100,1,5,25,10];
+            var min;
+            for(var i=0; i<sz2.length; i++){
+                for(var j=i; j<sz2.length;j++){
+                    if(sz2[i]>sz2[j]){
+                      min=sz2[j];
+                      sz2[j]=sz2[i];
+                      sz2[i]=min;
+                    }
+                }
+            }
+        document.write(sz2.toString()+"<br/>")
+
+        var sz3=[{type:"Volvo",year:2016},{type:"Saab",year:2001},{type:"BMW",year:2010}]
+        sz3.sort(function(a, b){return a.year - b.year});
+        document.getElementById("demo").innerHTML =sz3[0].type + " " + sz3[0].year + "<br>" +sz3[1].type + " " + sz3[1].year + "<br>" + sz3[2].type + " " + sz3[2].year;
+    </script>
+    <p Id="demo"></p>
+
+</body>
+</html>
