@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>秒表</title>
+    <style type="text/css">
+     </style>
+    <script type="text/javascript">
+    window.onload=function(){
+        var aIpt = document.getElementsByTagName('input')
+        var aSpan = document.getElementsByTagName('span')
+        var oDiv = document.getElementsByTagName('div')
+        var n=0;
+        aIpt[0].onclick=function(){
+ 
+        that    =   setInterval(
+                function(){
+                        aSpan[0].innerHTML = parseFloat(aSpan[0].innerHTML)+1  
+                },1000/60) 
+            }
+        aIpt[1].onclick=function(){
+                clearInterval(that)
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="开始计时" name="">
+    <input type="button" value="暂停计时" name="">
+    <br>Time passed:<span>00</span>s
+    <div></div>
+</body>
+</html>
