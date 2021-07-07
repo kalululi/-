@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: url(bg.jpeg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        h1{
+            color: darkseagreen;
+            text-align: center;
+            font-size: 100px;
+        }
+        .dh {
+            text-align:center;/*导航栏居中*/
+        }
+        ul{
+            list-style-type:none;
+            display:inline-block;/*让导航栏横着*/
+        }
+            li{
+                float: left;
+        }
+            a{ 
+                float: left;
+                width: 180px;
+                height: 20px;
+                text-align: center;
+                background-color: rgba(100,200,100, 0.3);
+                text-decoration-line: none;
+                color: white;
+                padding: 10px;
+                margin-right: 1px;
+            }
+            a:hover{
+                background: white;
+                color: yellowgreen;
+            } /*鼠标移动到导航栏后导航栏的颜色*/ 
+            hr{
+                background-color:darkseagreen;
+                height: 1px;
+                border: none;
+                }
+            /*以上是每一页都一样的部分*/
+            .zpzs1{
+                width: 600px;
+                height: 300px;
+                margin: 20px auto;
+            }
+            #zpzs2{  
+                width: 600px;
+                height: 250px;
+                margin: 0 auto;
+                visibility: hidden;
+            }
+           p{
+               text-align: center;
+               padding: 75px 0;
+               color:rgba(81, 116, 96, 0.603);
+           }
+           .zpzs1 img{
+            width:200px;
+             height:300px;
+           }
+           #zpzs2 img{
+             width:300px;
+             height:200px;
+           }
+           .zpzs1 div{
+               float: left;
+               width:200px;
+               height:250px;
+           }
+           #zpzs2 div{
+               float: left;
+               width:300px;
+               height:250px;
+           }
+    </style>
+</head>
+<body>
+    <h1>I'm RAN</h1>
+    <div class="dh">
+        <ul> 
+            <li><a href="">个人介绍</a></li>
+            <li><a href="">作品展示</a></li>
+            <li><a href="">联系方式</a></li>
+        </ul>
+    </div>
+    <hr>
+    <!--以上是每一页都一样的部分-->
+        <div class="zpzs1">
+            <div><img src="1.jpg"  ></div>
+            <div><P>林深时见鹿<br>溪午不闻钟<br>无人知所去<br>愁倚两三松</P></div>
+            <div><img src="2.jpg" ></div>
+         </div>
+         <div class="zpzs1">
+             <div><p>冰镇可乐<br>半糖奶茶<br>沙口西瓜<br>总有什么<br>是值得开心的</p></div>
+             <div><img src="3.jpg" ></div>
+             <div><p>我们牵着手<br>从小区走到公园<br>从鲜花走到古树<br>从时光走到身边</p></div>
+    </div>
+    <div id="gd" style="color: rgb(51, 131, 51);margin: 0 auto;background-color: rgb(255, 255, 255);text-align: center;" onclick="xs()">更多</div>
+    <div id="zpzs2">
+        <div><img src="4.JPG"></div>
+        <div><P>每个人都是一座孤岛<br>没有谁是一座孤岛<br>不要问丧钟为谁而鸣<br>丧钟为你而鸣</P></div>
+        <div><img src="5.JPG" ></div>
+         <div><p>船在城里开<br>我在海里走<br>心在草里跳<br>鹿在心里跑</p></div>
+         <div><img src="6.jpg" ></div>
+         <div><p>草帽<br>水枪<br>渔兜<br>孩子的夏天<br>总是无惧烈日</p></div>
+        </div>
+    <script> 
+        function xs(){
+            var vs=document.getElementById("zpzs2");
+            var gd=document.getElementById("gd");
+            vs.style.visibility="visible";
+            gd.style.display="none";
+        } 
+        //让隐藏的部分显示
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: url(bg.jpeg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        h1{
+            color: darkseagreen;
+            text-align: center;
+            font-size: 100px;
+        }
+        .dh {
+            text-align:center;/*导航栏居中*/
+        }
+        ul{
+            list-style-type:none;
+            display:inline-block;/*让导航栏横着*/
+        }
+        ul li{
+                float: left;
+        }
+            a{ 
+                float: left;
+                width: 180px;
+                height: 20px;
+                text-align: center;
+                background-color: rgba(100,200,100, 0.3);
+                text-decoration-line: none;
+                color: white;
+                padding: 10px;
+                margin-right: 1px;
+            }
+            a:hover{
+                background: white;
+                color: yellowgreen;
+            }
+            hr{
+                background-color:darkseagreen;
+                height: 1px;
+                border: none;
+            }
+            /*以上是每一页都一样的部分*/
+            #ly{
+                width: 600px;
+                height: 200px;
+                margin: 20px auto;
+                text-align: center;
+            }
+           #pl{   
+            width: 600px;
+            height: 200px;
+            margin: 10px auto;
+            text-align: left;
+            color: rgba(79, 122, 35, 0.699);
+           }
+           #text{
+               border:1px solid rgb(89, 124, 75);
+               outline:none ;
+           }
+           button{
+               width: 60px;
+               height: 30px;
+               background:rgb(163, 180, 145);
+               color: rgb(247, 245, 240);
+               text-align: center;
+           }
+           p{
+               color: rgb(129, 158, 129);
+               background-color: rgb(238, 238, 238);
+               margin-bottom: 30px;
+           }
+    </style>
+</head>
+<body>
+    <h1>I'm RAN</h1>
+    <div class="dh">
+        <ul> 
+            <li><a href="">个人介绍</a></li>
+            <li><a href="">作品展示</a></li>
+            <li><a href="">联系方式</a></li>
+        </ul>
+    </div>
+    <hr>
+    <!--以上是每一页都一样的部分-->
+    <div id="ly">
+        <p style="float: left;">邮箱：1519403275@qq.com</p>
+        <p style="float: right;">电话；19967322177</p>
+        <textarea  id="text" value="" cols="73" rows="10" ></textarea><br>
+        <button type="button" onclick="lyly()">留言</button>
+    <div id="pl">
+        <ol id="lyb">
+        </ol>
+    </div>
+        <script >
+          var tet= document.getElementById("text");
+          function lyly(){
+              var Li= document.createElement("li");
+              Li.innerHTML= tet.value;
+              lyb.appendChild(Li);
+              text.value="";
+          }
+          //让留言出现在留言板下方
+        </script>      
+    </div> 
+</body>
+</html>

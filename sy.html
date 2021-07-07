@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: url(bg.jpeg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        h1{
+            color: darkseagreen;
+            text-align: center;
+            font-size: 100px;
+        }
+        .dh {
+            text-align:center;/*导航栏居中*/
+        }
+        ul{
+            list-style-type:none;
+            display:inline-block;
+        }
+        li{
+                float: left;
+        }
+            a{ 
+                float: left;
+                width: 180px;
+                height: 20px;
+                text-align: center;
+                background-color: rgba(100,200,100, 0.3);
+                text-decoration-line: none;
+                color: white;
+                padding: 10px;
+                margin-right: 1px;
+            }
+            a:hover{
+                background: white;
+                color: yellowgreen;
+            }/*鼠标移动到导航栏后导航栏的颜色*/
+            hr{
+                background-color:darkseagreen;
+                height: 1px;
+                border: none;
+            }
+             /*以上是每一页都一样的部分*/
+            .sy{
+                margin:0 auto ;/*首页内容居中*/
+                width: 600px;
+                height: 300px;
+            }
+            .zp{
+                margin: 20px  0px;
+                float:left;
+            }
+            .js{
+                width: 250px;
+                height: 100px;
+                float: right;
+                margin-top: 60px;
+                margin-right: 70px;
+            }
+           .js p{
+                text-align: left;
+                background-color: #a3d174cb; 
+                color: #f0fcff;
+                margin: 10px;
+                border-bottom:5px solid #b3b9b980;
+                border-left:5px solid #f1f1f1b9 ;
+           }
+           .jl p{
+              text-align:center; 
+              color:rgba(81, 116, 96, 0.603);
+           }
+    </style>
+</head>
+<body>
+    <h1>I'm RAN</h1>
+    <div class="dh">
+        <ul> 
+            <li><a href="">个人介绍</a></li>
+            <li><a href="">作品展示</a></li>
+            <li><a href="">联系方式</a></li>
+        </ul>
+    </div>
+    <hr>
+     <!--以上是每一页都一样的部分-->
+    <div class="sy">
+        <div class="zp" >
+            <img src="zp.jpg" alt=""  width="200">
+        </div>
+        <div class="js">
+            <p> 姓名：&nbsp&nbsp&nbsp张冉</p>
+            <p>学号：&nbsp&nbsp&nbsp19110418</p>
+            <p>专业：&nbsp&nbsp&nbsp传播学（新媒体方向）</p> 
+            <p>家乡：&nbsp&nbsp&nbsp浙江台州</p>
+            <p>喜好：&nbsp&nbsp&nbsp摄影 </p>
+        </div>
+    </div>
+    <div class="jl">
+        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+        <p>个人经历</p>
+        <p>2019年获得大学生英语四六级证书</p>
+        <p>2019年获得校三等奖学金</p>
+        <p>2020年任国防协会组织部部长</p>
+        <p>2020年获得浙江省计算机二级证书</p>
+        <p>2020年获得挑战杯省一等奖</p>
+    </div>
+</body>
+</html>
