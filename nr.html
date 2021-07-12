@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       .mdd {
+            border: 1px solid;
+        }
+        td {
+            padding: 15px;
+            text-align: center;
+            width: 50px;
+        }
+      *{
+            padding:0;
+            margin: 0;
+            cursor: url(sb.ico),auto;
+        }
+       table {
+           border: 1px solid;
+           margin: 50px auto; 
+           text-align: center; 
+       }
+       div{
+           margin: 0 auto;
+           text-align: center;
+       }
+       #an{
+           float: right;
+       }
+       a{
+           text-decoration: none;
+           color: #000;;
+       }
+    </style>
+</head>
+<body>
+    <button id="an"><a href="">重新开始</a></button>
+    <div id="dkk">
+    <div >
+        <button onclick="ckrw()">查看任务</button>
+        <p id="rwd"></p>
+    </div>
+    <table  id="dkk"><!--地图-->
+       <tr><!--1-->
+            <td class="gun" onmouseover="zq()"></td>
+            <td class="mdd" onclick="ys(0)" >北二门</td>
+            <td class="mdd" rowspan="2" onclick="bz(0)">8教</td>
+            <td class="gun" rowspan="5" onmouseover="zq()" ></td>
+            <td class="gun" onmouseover="zq()"></td>
+            <td class="gun" onmouseover="zq()"></td> 
+            <td class="mdd" rowspan="2" onclick="ys(1)">校医院</td>
+            <td class="mdd" onclick="ys(2)">北一门</td>
+            <td class="gun" colspan="2"onmouseover="zq()"></td>      
+        </tr>
+        <tr><!--2-->
+            <td class="mdd" rowspan="2"onclick="ys(3)">体育馆</td>
+            <td rowspan="10"></td>
+            <td class="mdd" rowspan="2" colspan="2" onclick="ys(4)">图书馆</td>
+            <td rowspan="10"></td>
+            <td class="mdd" colspan="2" onclick="zh(0)">学生活动中心</td>            
+        </tr>
+        <tr><!--3-->
+            <td class="gun" rowspan="2" onmouseover="zq()"></td>
+            <td class="gun" onmouseover="zq()"></td>
+            <td class="gun" colspan="2" rowspan="2" onmouseover="zq()"></td>
+        </tr>
+        <tr><!--4-->
+            <td class="gun" onmouseover="zq()"></td>
+            <td rowspan="8" colspan="2"></td>
+            <td class="mdd" onclick="bz(2)">7教</td>
+        </tr>
+        <tr><!--5-->
+            <td class="mdd" rowspan="2" onclick="ys(5)">篮球场</td>
+            <td class="mdd" onclick="bz(3)">6教</td>
+            <td class="gun" onmouseover="zq()"></td>
+            <td class="mdd" onclick="ys(6)">12教</td>
+            <td class="mdd" onclick="ys(7)">11教</td>
+        </tr>
+        <tr><!--6-->
+            <td colspan="2"></td>
+            <td></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr><!--7-->
+            <td class="gun" onmouseover="zq()"></td>
+            <td class="gun" colspan="2" onmouseover="zq()"></td>
+            <td class="gun" onmouseover="zq()"></td>
+            <td class="mdd" onclick="ys(8)">10教</td>
+            <td class="mdd" onclick="bz(3)">9教</td>
+        </tr>
+        <tr><!--8-->
+            <td class="mdd" rowspan="2" onclick="ys(9)">网球场</td>
+            <td class="mdd" onclick="bz(4)">4教</td>
+            <td class="gun" rowspan="4" onmouseover="zq()"></td>
+            <td class="mdd" onclick="bz(5)">3教</td>
+            <td class="gun" rowspan="4" onmouseover="zq()"></td>
+            <td class="gun" rowspan="2" onmouseover="zq()"></td>
+        </tr>
+        <tr><!--9-->
+            <td class="gun" rowspan="2" onmouseover="zq()"></td>
+            <td class="gun" rowspan="2" onmouseover="zq()"></td>
+        </tr>
+        <tr><!--10-->
+            <td class="gun" rowspan="5" onmouseover="zq()"></td>
+            <td class="mdd" rowspan="3" onclick="ys(10)">科技馆</td>
+        </tr>
+        <tr><!--11-->
+            <td class="mdd" onclick="bz(6)">2教</td>
+            <td class="mdd" onclick="bz(7)">1教</td>
+        </tr>
+        <tr><!--12-->
+            <td colspan="8"></td>
+        </tr>
+        <tr><!--13-->
+            <td class="mdd" onclick="ys(11)">行政楼</td>
+            <td class="gun" rowspan="2" colspan="2" onmouseover="zq()"></td>
+            <td class="mdd" colspan="2" rowspan="2" onclick="zh(1)">亚洲第二大门</td>
+            <td class="gun" colspan="4" rowspan="2" onmouseover="zq()"></td>
+        </tr>
+        <tr><!--14-->
+            <td class="gun" onmouseover="zq()"></td>
+        </tr>
+    </table>
+    </div>
+    <script>
+        var sx=1;
+        var dkk1=document.getElementById("dkk");
+        var an1=document.getElementById("an");
+        var sj1="北二门校医院北一门体育馆图书馆篮球场12教11教10教网球场科技馆行政楼";
+        var sj2="1教2教3教4教6教7教8教9教";
+        var sj3="亚洲第二大门学生活动中心";
+        var zsj1=sj1.substr(Math.floor(Math.random()*12)*3,3);//随机生成笔记点
+        var zsj2=sj2.substr(Math.floor(Math.random()*8)*2,2);//随机生产藏宝点
+        var zsj3=sj3.substr(Math.floor(Math.random()*2)*6,6);//随机生产目的地
+        function ckrw(){
+        var wsj="请悄悄潜入"+zsj1+"寻找笔记，再前往"+zsj2+"将前辈的密藏带往"+zsj3+"(๑•̀ㅂ•́)و✧";
+            document.getElementById("rwd").innerHTML = wsj;
+        }//生成并展示任务
+        function zq(){
+            alert("你一头撞到了墙上 (ノへ￣、) \n救护车把你送去了医院--滴嘟滴嘟～～");
+            dkk1.style.display="none";
+        }//经过禁止通行区域
+        function ys(n){
+            var bj=sj1.substr(n*3,3);
+            var ys=new Array();
+             ys[0]="好像不在这里哦，再找找吧  ︿(￣︶￣)︿";
+             ys[1]="唔～这是...谁的高数书放这辟邪啊 (╯°Д°)╯︵ ┻━┻";
+             ys[2]=" ┬─┬ ノ( ' - 'ノ) {摆好摆好 桌子是无辜的）";
+             ys[3]="（╯' - ')╯︵ ┻━┻ （叮～恭喜你获得了“吃了一半的早餐”）";
+             ys[4]="┬─┬ ノ( ' - 'ノ) {心平气和地摆好桌子）";
+             ys[5]=" (╯°Д°)╯︵ ┻━┻(再***掀一张）";
+             ys[6]="嘭！恭喜你获得了无名的笔记 (￣︶￣)↗记得把桌子摆好呦～";
+            if (bj==zsj1){
+                for (i=0;i<7;i++) {
+                   alert(ys[i]);
+                   sx=2;
+               }
+            }else{
+                alert("你寻找了一天依然一无所获。\n天黑的时候，你又饿又累，决定去厕所休闲一下。\n由于没有看到“小心地滑”的牌子\n你成为了校园七大不可思议之八。");          
+            }
+        }//寻找笔记的剧情
+        function bz(n){
+            var mc=sj2.substr(n*2,2);
+            if(mc=zsj2&&sx==2){
+               var xz=prompt("你在墙上发现了一副神像 \n 请选择贡品  \nA吃了一半的早餐   B无名的笔记   C再画一副神像");
+                   if(xz=="A"){
+                     alert("神从背后掏出了一把枪 \n▄︻┻┳═一…… ☆（>○<）\n你成为了校园七大不可思议之九");
+                     dkk1.style.display="none";
+                   }else if(xz=="B"){
+                     alert("很久很久以后～你听到了神的呼噜声");
+                   }else if(xz=="C"){
+                     alert("你画的神像丑得天怒人怨\n神被它吓得跳出了墙\n你由于破坏公物被送去了警察局");
+                     dkk1.style.display="none";
+                   }else{
+                     alert("神看你一眼，并向你扔了一块砖 \n你触发了被动技能“薛定谔的空手接白刃”\n叮～你获得了前辈的密藏");sx=3;
+            }
+            }else{
+             alert("你寻找了一天依然一无所获。\n天黑的时候，你又饿又累，决定去厕所休闲一下。\n由于没有看到“小心地滑”的牌子\n你成为了校园七大不可思议之八。");
+             dkk1.style.display="none";
+            }
+        }//寻找密藏的剧情
+        function zh(n){
+            if(n==1&&sx==3&&zsj3=="亚洲第二大门"){
+                alert("你利用笔记和密藏潜心学习\n终于在四年后成为了“亚洲第二大门”的看门人");
+            }else if(n==0&&sx==2&&zsj3=="学生活动中心"){
+                alert("你发现这里正在进行新生报道\n于是你掏出自己的录取通知书\n成为了一名HDUER");
+            }else{
+                alert("你寻找了一天依然一无所获。\n天黑的时候，你又饿又累，决定去厕所休闲一下。\n由于没有看到“小心地滑”的牌子\n你成为了校园七大不可思议之八。");
+                dkk1.style.display="none";
+            }
+        } 
+    </script>
+</body>
+</html>
