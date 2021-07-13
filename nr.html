@@ -123,6 +123,7 @@
     </table>
     </div>
     <script>
+        var zlyc=0;
         var sx=1;
         var dkk1=document.getElementById("dkk");
         var an1=document.getElementById("an");
@@ -150,12 +151,16 @@
              ys[4]="┬─┬ ノ( ' - 'ノ) {心平气和地摆好桌子）";
              ys[5]=" (╯°Д°)╯︵ ┻━┻(再***掀一张）";
              ys[6]="嘭！恭喜你获得了无名的笔记 (￣︶￣)↗记得把桌子摆好呦～";
-            if (bj==zsj1){
+            if (bj==zsj1&&zlyc==1){
                 for (i=0;i<7;i++) {
                    alert(ys[i]);
                    sx=2;
                }
-            }else{
+            }else if (bj==zsj1){
+                   zlyc=1;
+                   alert(ys[0]);
+               }
+            else{
                 alert("你寻找了一天依然一无所获。\n天黑的时候，你又饿又累，决定去厕所休闲一下。\n由于没有看到“小心地滑”的牌子\n你成为了校园七大不可思议之八。");          
             }
         }//寻找笔记的剧情
@@ -188,7 +193,7 @@
                 alert("你寻找了一天依然一无所获。\n天黑的时候，你又饿又累，决定去厕所休闲一下。\n由于没有看到“小心地滑”的牌子\n你成为了校园七大不可思议之八。");
                 dkk1.style.display="none";
             }
-        } 
+        } //结局
     </script>
 </body>
 </html>
